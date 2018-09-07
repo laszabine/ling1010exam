@@ -94,6 +94,7 @@ For Mac:
 
 If you run into a problem, Google your problem.
 You will find instructions and tutorials.
+
 ---
 
 Now we turn to the actual procedure.
@@ -287,11 +288,11 @@ Don't give up, think of the trees :)
 Overall, for each exam, you should create the following PDFs:
 
   1. `exam-?-v1-withA.pdf`
-	1. `exam-?-v1-withoutA.pdf`
-	1. `exam-?-v2-withA.pdf`
-	1. `exam-?-v2-withoutA.pdf`
-	1. `exam-?-v3-withA.pdf`
-	1. `exam-?-v3-withoutA.pdf`
+  1. `exam-?-v1-withoutA.pdf`
+  1. `exam-?-v2-withA.pdf`
+  1. `exam-?-v2-withoutA.pdf`
+  1. `exam-?-v3-withA.pdf`
+  1. `exam-?-v3-withoutA.pdf`
 
 **Step 5.**
 Share these PDFs with the other TAs.
