@@ -1,0 +1,128 @@
+% Author: Adrian Stegovec
+% Date created: Spring 2014
+% Modified by: Sabine Laszakovits
+% Date modified: Spring 2015
+
+\documentclass[12pt,letterpaper,landscape,twocolumn,twoside]{article}
+
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{00A0}{ }
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+\usepackage[headsep=0.1in,top=1.25cm,bottom=1.25cm,left=1.25cm,right=1.25cm,nofoot]{geometry}
+\usepackage{multicol} \setlength{\columnsep}{0.15cm}
+\usepackage{lastpage}
+
+\usepackage[extra]{tipa}		% this is for IPA symbols
+\usepackage{tipx}
+\usepackage[T1]{fontenc}
+%\usepackage{garamondx}%
+\usepackage{euler}
+\usepackage[chicago]{ellipsis}
+\newcommand{\ellipsis}{\textup{[\,\textellipsis]\xspace}}
+\usepackage[multiple]{footmisc}
+
+\usepackage{enumerate}
+\usepackage{forest}
+
+\usepackage{colortbl}
+\usepackage{array,tabularx}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage[normalem]{ulem}
+\usepackage{qtree}				% this is the package for trees. If you want to use something else, change this.
+\usepackage{linguex}
+
+
+% Okvirji za komentarje ------------------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage[many]{tcolorbox}
+\newcounter{question}
+\tcbset{box/.style={title={},left=0mm,top=-0.5mm,bottom=-0.25mm,right=0mm,middle=-0.15mm,%
+bicolor,colback=gray!15!white,colbacklower=white,fonttitle=\bfseries,width=\linewidth,floatplacement=!b,%
+colframe=white,borderline={0.75pt}{0pt}{black},%
+before={\par\smallskip\pagebreak[0]\noindent},
+after={\par\smallskip}}}
+% Instructions Box ------------------------------------------------------------------------------------------------
+\newtcolorbox{instructions}[1][]{%
+enhanced,breakable,colback=gray!15!white,colframe=gray!33!black,top=4mm,
+enlarge top by=\baselineskip/2+1mm,
+enlarge top at break by=0mm,pad at break=2mm,
+fontupper=\normalsize\it\bfseries,
+overlay unbroken and first={%
+\node[rectangle,rounded corners,draw=black,fill=gray!33!black,
+inner sep=1mm,anchor=west,font=\small]
+at ([xshift=4.5mm]frame.north west){\strut\textbf{\textcolor{white}{{ }\large\underline{Instructions:}{ }}}};}, #1}%
+
+\newcommand{\NOT}{{\bfseries\underline{NOT}{ }}}
+\newcommand{\CANNOT}{{\bfseries\underline{CANNOT}{ }}}
+\newcommand{\CAN}{{\bfseries\underline{CAN}{ }}}
+\newcommand{\FALSE}{{\bfseries\underline{FALSE}{ }}}
+\newcommand{\TRUE}{{\bfseries\underline{TRUE}{ }}}
+\newcommand{\stress}[1]{{\sl\underline{#1}}}
+\newcommand{\strong}[1]{{\bfseries\underline{#1}}}
+\newcommand{\word}[1]{{\sl `#1'}}
+\newcommand{\sym}[1]{{\sl ``#1''}}
+\newcommand{\correct}{\textbf{$\blacktriangleright${ }}}
+\newcommand{\Q}[1]{\begin{tcolorbox}[box]\addtocounter{question}{1}\paragraph{\large \bfseries (\arabic{question})\hspace*{-2mm}}#1\end{tcolorbox}}
+\newcommand{\xa}{\item}
+\newcommand{\xb}{\item}
+\newcommand{\xc}{\item}
+\newcommand{\A}[1]{\tcblower\begin{enumerate}[\bfseries (a)]\setlength{\itemsep}{1pt}#1\end{enumerate}}
+
+% =========================== CHANGE THIS HERE
+\def\CLASS{LING 1010}
+\def\EXAM{Exam~1}
+\def\SEMESTER{Spring 2015}
+\def\VERSION{Version~3}
+\def\correct{} % remove the '%' at the beginning of this line to show which answers are correct
+% =========================== (stop editing)
+
+\title{{\large \bfseries \vspace*{-12.5mm} \CLASS{} --- \SEMESTER}\\
+\vspace*{-2.5mm}
+%{\normalsize \SEMESTER}\\
+\vspace{.5\baselineskip}
+\small
+\tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,
+toptitle=0.5mm,bottomtitle=0.5mm,title=\large{\hspace{4.5cm}\EXAM{} --- \VERSION}]{%
+\arrayrulecolor{white!50!black}\renewcommand{\arraystretch}{1.2}%
+\begin{tabular}{l||l}
+\textbf{Name}  & {\hspace{8.5cm}} \\[1.5ex]
+\hline
+\textbf{NetID} & \\[1.5ex]
+\hline
+\textbf{Peoplesoft \#} & \\[1.5ex]
+\hline
+\textbf{Section \#} & \\[1.5ex]
+\end{tabular}}
+}
+\date{}
+\author{}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\fancyhead[LO]{\bfseries \CLASS{} --- \EXAM}
+\fancyhead[RO]{\bfseries \VERSION}
+\fancyhead[LE]{\bfseries \CLASS{} --- \EXAM}
+\fancyhead[RE]{\bfseries \VERSION}
+\fancyhead[C]{\bfseries page \thepage{} of \pageref{LastPage}}
+%\cfoot{\thepage}
+\cfoot{}
+\pagestyle{fancy}
+
+
+\begin{document}
+\fontsize{10}{12.5} \selectfont
+\maketitle
+\thispagestyle{empty}
+\vspace{-5em} % where does this space come from?
+\begin{instructions}
+Choose the BEST answer to each of the following questions!
+\end{instructions}
+
+% ======================= CHANGE THIS HERE
+\input{sample-latexQA}
+% ======================= (stop editing)
+
+\end{document}

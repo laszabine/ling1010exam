@@ -25,11 +25,11 @@ You need:
 1. The file `shuffle2latex.py`
 2. The file `exam-template.tex`
 
-Optional:
-* The file `sample-formattedQA.txt`			<= this is what requires work
-* The file `sample-latexQA.tex`
-* The file `sample-exam-withA.pdf`			<= this is what the final product will look like :)
-* The file `sample-exam-withoutA.pdf`		<= and this
+The following example files are optional:
+* The file `exam-0-QA-formatted.txt`			<= this is what requires work
+* The file `exam-0-v1.tex`
+* The file `exam-0-v1-withA.pdf`			<= this is what the final product will look like :)
+* The file `exam-0-v1-withoutA.pdf`		<= and this
 
 To get these files, go to https://github.com/laszabine/ling1010exam (if you're not there already) and use the green button that reads `Clone or download`.
 Click `Download ZIP` and save it on your computer, then extract the zip archive.
@@ -145,7 +145,7 @@ In this plain text editor, create a new document and save it under `exam-?.txt`,
 
 Copy-paste each question and its answers separately into this text document.
 **Follow ALL the instructions below.**
-Look at the file `sample-formattedQA.txt` to see an example of what it should look like.
+Look at the file `exam-0-QA-formatted.txt` to see an example of what it should look like.
 
 * Use new lines exactly where these instructions tell you to use them.
 Do not use them anywhere else.
@@ -195,7 +195,7 @@ This is important.
 
 * Do not start new lines anywhere else.
 
-Check the file `sample-formattedQA.tex` to see an example of a correctly formatted file.
+Check the file `exam-0-QA-formatted.tex` to see an example of a correctly formatted file.
 
 ## Run the shuffler script
 
@@ -234,7 +234,7 @@ It should be done in a couple of seconds.
 
 **Step 5.**
 Now you have an additional file called `exam-?-v?.tex` (with whatever you chose instead of `?`).
-It should look similar to the file `sample-latexQA.tex`.
+It should look similar to the file `exam-0-v1.tex`.
 
 **Step 6.**
 Repeat this for the other version.
@@ -271,6 +271,8 @@ Scroll down to the end of the file where it again says `CHANGE THIS HERE`.
 
 **Step 1.**
 In your LaTeX editor, use `pdflatex` (should be the default) to generate a PDF out of `exam-template.tex`
+You may have to install additional LaTeX packages.
+If you're unsure how to do this, google it. 
 
 **Step 2.**
 This file will automatically be named `exam-template.pdf`.
